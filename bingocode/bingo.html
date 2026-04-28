@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bingo Pro</title>
+  <link rel="stylesheet" href="bingo.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>BingoPro</h2>
+  <button onclick="showScreen('profileScreen')">Profile</button>
+  <span id="navName"></span>
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen">
+  <h1>Welcome</h1>
+  <input id="nameInput" placeholder="Enter your name">
+  <button onclick="login()">Continue</button>
+</div>
+
+<!-- MENU -->
+<div id="menuScreen" class="screen">
+  <h2>Select Mode</h2>
+
+  <button onclick="selectMode('computer')">Computer</button>
+  <button onclick="selectMode('friend')">Friend</button>
+
+  <button onclick="startGame()">Start Game</button>
+</div>
+
+<!-- PROFILE -->
+<div id="profileScreen" class="screen">
+  <h2>Profile</h2>
+  <h3 id="profileName"></h3>
+  <h4 id="profileWins"></h4>
+  <button onclick="showScreen('menuScreen')">Back</button>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<!-- GAME -->
+<div id="gameScreen" class="screen">
+  <h2 id="turnInfo"></h2>
+  <h3 id="roomCode"></h3>
+
+  <div class="scoreboard">
+    <span id="score1"></span>
+    <span id="score2"></span>
+  </div>
+
+  <div id="board" class="board"></div>
+
+  <h3 id="status"></h3>
+
+  <div class="game-buttons">
+    <button onclick="startGame()">New Game</button>
+    <button onclick="endGame()">End Game</button>
+  </div>
+</div>
+
+<!-- SOUND -->
+<audio id="winSound" src="player-win.mp3"></audio>
+<audio id="loseSound" src="computer-win.mp3"></audio>
+
+<script src="bingo.js"></script>
+</body>
+</html>

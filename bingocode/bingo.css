@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #1e293b;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.active {
+  display: block;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.marked {
+  background: green;
+  color: white;
+}
+
+.completed {
+  background: gold;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-buttons {
+  margin-top: 20px;
+}
